@@ -14,6 +14,7 @@
 		841AA50022737DBA00DB843F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 841AA4FF22737DBA00DB843F /* Assets.xcassets */; };
 		841AA50322737DBA00DB843F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841AA50122737DBA00DB843F /* LaunchScreen.storyboard */; };
 		C092F33E2273946000667B9F /* TelaPrincipal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C092F33D2273946000667B9F /* TelaPrincipal.storyboard */; };
+		F3587A5B2273998B0088071C /* TelaInicial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3587A5A2273998B0088071C /* TelaInicial.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		841AA50222737DBA00DB843F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		841AA50422737DBA00DB843F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C092F33D2273946000667B9F /* TelaPrincipal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TelaPrincipal.storyboard; sourceTree = "<group>"; };
+		F3587A5A2273998B0088071C /* TelaInicial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TelaInicial.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				841AA4F522737DB800DB843F /* AppDelegate.swift */,
 				841AA4F722737DB800DB843F /* ViewController.swift */,
 				841AA4F922737DB800DB843F /* Main.storyboard */,
+				F3587A5A2273998B0088071C /* TelaInicial.storyboard */,
 				C092F33D2273946000667B9F /* TelaPrincipal.storyboard */,
 				841AA4FF22737DBA00DB843F /* Assets.xcassets */,
 				841AA50122737DBA00DB843F /* LaunchScreen.storyboard */,
@@ -129,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				841AA50322737DBA00DB843F /* LaunchScreen.storyboard in Resources */,
+				F3587A5B2273998B0088071C /* TelaInicial.storyboard in Resources */,
 				841AA50022737DBA00DB843F /* Assets.xcassets in Resources */,
 				841AA4FB22737DB800DB843F /* Main.storyboard in Resources */,
 				C092F33E2273946000667B9F /* TelaPrincipal.storyboard in Resources */,
