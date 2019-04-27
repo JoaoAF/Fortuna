@@ -17,7 +17,7 @@ extension ViewController: UITableViewControllerDataSource {
   
     // Return the number of rows for the table.     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return lancamentos?.count ?? 0
+        return lancamentos?.count ?? 1
     }
 
     // Provide a cell object for each row.
@@ -31,6 +31,10 @@ extension ViewController: UITableViewControllerDataSource {
             cell.detailTextLabel.text = "\(lancamento.moeda) \(lancamento.valor)"
             cell.detailTextLabel.textColor = lancamento.isGasto ? .red : .green
             cell.accessoryType = .disclosureIndicator
+        } else {
+            cell.textLabel.text = "Nenhum lancamento encontrado"
+            cell.textLabel.textAlignment = .center
+            cell.textLabel.textColor = .gray
         }
 
         return cell
