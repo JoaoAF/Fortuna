@@ -1,43 +1,44 @@
+//
+//  TelaPrincipalViewController.swift
+//  fortuna
+//
+//  Created by Rafael Parente on 27/04/19.
+//  Copyright © 2019 João Paulo de Araújo Ferreira. All rights reserved.
+//
+
 import UIKit
 
-class ViewController: UIViewController {
+class TelaPrincipalViewController: UIViewController {
 
-    @IBOutlet weak var lancamentosTablewView: UITableView!
+    @IBOutlet weak var lancamentosTableView: UITableView!
     
     var lancamentos: [Lancamento]?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        lancamentosTablewView.dataSource = self
+        lancamentosTableView.dataSource = self
     }
-
+    
 }
 
-extension ViewController: UITableViewControllerDataSource {
-  
-    // Return the number of rows for the table.     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return lancamentos?.count ?? 1
+extension TelaPrincipalViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return lancamentos?.count ?? 0
     }
-
-    // Provide a cell object for each row.
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Fetch a cell of the appropriate type.
         let cell = tableView.dequeueReusableCell(withIdentifier: "lancamentoCell", for: indexPath)
-
+        
         if let lancamentos = lancamentos {
-            lancamento = lancamentos[indexPath.row]
-            cell.textLabel.text = lancamento.descricao ?? lancamento.categoria
-            cell.detailTextLabel.text = "\(lancamento.moeda) \(lancamento.valor)"
-            cell.detailTextLabel.textColor = lancamento.isGasto ? .red : .green
+            let lancamento = lancamentos[indexPath.row]
+            //cell.textLabel?.text = lancamento.descricao ?? lancamento.categoria
+            //cell.detailTextLabel?.text = "\(lancamento.moeda) \(lancamento.valor)"
+            cell.detailTextLabel?.textColor = lancamento.isGasto ? .red : .green
             cell.accessoryType = .disclosureIndicator
-        } else {
-            cell.textLabel.text = "Nenhum lancamento encontrado"
-            cell.textLabel.textAlignment = .center
-            cell.textLabel.textColor = .gray
         }
-
+        
         return cell
     }
-
+    
 }
