@@ -16,10 +16,16 @@
 		906DC051227512EF008FFA26 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906DC050227512EF008FFA26 /* CoreDataManager.swift */; };
 		906DC05B2275146E008FFA26 /* Lancamento+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906DC05A2275146E008FFA26 /* Lancamento+CoreDataProperties.swift */; };
 		906DC05D227514D9008FFA26 /* Lancamento+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906DC05C227514D9008FFA26 /* Lancamento+CoreDataClass.swift */; };
-		906DC05F227515B3008FFA26 /* TelaInicialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906DC05E227515B3008FFA26 /* TelaInicialViewController.swift */; };
-		906DC061227517AA008FFA26 /* TelaPrincipalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906DC060227517AA008FFA26 /* TelaPrincipalViewController.swift */; };
-		C092F33E2273946000667B9F /* TelaPrincipal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C092F33D2273946000667B9F /* TelaPrincipal.storyboard */; };
-		F3587A5B2273998B0088071C /* TelaInicial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3587A5A2273998B0088071C /* TelaInicial.storyboard */; };
+		90C9E85722760D5600FAEAB5 /* Metas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90C9E85622760D5600FAEAB5 /* Metas.storyboard */; };
+		90C9E85922760DEE00FAEAB5 /* MetasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C9E85822760DEE00FAEAB5 /* MetasViewController.swift */; };
+		90E53D9E2275CD870009F6A9 /* ResumoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E53D9D2275CD870009F6A9 /* ResumoViewController.swift */; };
+		90E53DA22275DC1A0009F6A9 /* Resumo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90E53DA12275DC1A0009F6A9 /* Resumo.storyboard */; };
+		90E53DA42275DDCE0009F6A9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90E53DA32275DDCE0009F6A9 /* Login.storyboard */; };
+		90E53DA62275DE9E0009F6A9 /* ResumoDetalhado.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90E53DA52275DE9E0009F6A9 /* ResumoDetalhado.storyboard */; };
+		90E53DA82275DF820009F6A9 /* ResumoDetalhadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E53DA72275DF820009F6A9 /* ResumoDetalhadoViewController.swift */; };
+		90E53DAA2275E2BC0009F6A9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E53DA92275E2BC0009F6A9 /* LoginViewController.swift */; };
+		90E53DAC2275E2EA0009F6A9 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E53DAB2275E2EA0009F6A9 /* SignInViewController.swift */; };
+		90E53DAE2275E3070009F6A9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E53DAD2275E3070009F6A9 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,10 +40,16 @@
 		906DC050227512EF008FFA26 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		906DC05A2275146E008FFA26 /* Lancamento+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Lancamento+CoreDataProperties.swift"; path = "fortuna/Lancamento+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		906DC05C227514D9008FFA26 /* Lancamento+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Lancamento+CoreDataClass.swift"; path = "fortuna/Lancamento+CoreDataClass.swift"; sourceTree = "<group>"; };
-		906DC05E227515B3008FFA26 /* TelaInicialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaInicialViewController.swift; sourceTree = "<group>"; };
-		906DC060227517AA008FFA26 /* TelaPrincipalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaPrincipalViewController.swift; sourceTree = "<group>"; };
-		C092F33D2273946000667B9F /* TelaPrincipal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TelaPrincipal.storyboard; sourceTree = "<group>"; };
-		F3587A5A2273998B0088071C /* TelaInicial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TelaInicial.storyboard; sourceTree = "<group>"; };
+		90C9E85622760D5600FAEAB5 /* Metas.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Metas.storyboard; sourceTree = "<group>"; };
+		90C9E85822760DEE00FAEAB5 /* MetasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetasViewController.swift; sourceTree = "<group>"; };
+		90E53D9D2275CD870009F6A9 /* ResumoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumoViewController.swift; sourceTree = "<group>"; };
+		90E53DA12275DC1A0009F6A9 /* Resumo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Resumo.storyboard; sourceTree = "<group>"; };
+		90E53DA32275DDCE0009F6A9 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		90E53DA52275DE9E0009F6A9 /* ResumoDetalhado.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResumoDetalhado.storyboard; sourceTree = "<group>"; };
+		90E53DA72275DF820009F6A9 /* ResumoDetalhadoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumoDetalhadoViewController.swift; sourceTree = "<group>"; };
+		90E53DA92275E2BC0009F6A9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		90E53DAB2275E2EA0009F6A9 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		90E53DAD2275E3070009F6A9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,14 +88,20 @@
 				841AA4F522737DB800DB843F /* AppDelegate.swift */,
 				841AA4F722737DB800DB843F /* ViewController.swift */,
 				841AA4F922737DB800DB843F /* Main.storyboard */,
-				C092F33D2273946000667B9F /* TelaPrincipal.storyboard */,
-				F3587A5A2273998B0088071C /* TelaInicial.storyboard */,
+				90E53DA12275DC1A0009F6A9 /* Resumo.storyboard */,
 				841AA4FF22737DBA00DB843F /* Assets.xcassets */,
 				841AA50122737DBA00DB843F /* LaunchScreen.storyboard */,
 				841AA50422737DBA00DB843F /* Info.plist */,
 				841AA4FC22737DB800DB843F /* fortuna.xcdatamodeld */,
-				906DC05E227515B3008FFA26 /* TelaInicialViewController.swift */,
-				906DC060227517AA008FFA26 /* TelaPrincipalViewController.swift */,
+				90E53D9D2275CD870009F6A9 /* ResumoViewController.swift */,
+				90E53DA32275DDCE0009F6A9 /* Login.storyboard */,
+				90E53DA52275DE9E0009F6A9 /* ResumoDetalhado.storyboard */,
+				90E53DA72275DF820009F6A9 /* ResumoDetalhadoViewController.swift */,
+				90E53DA92275E2BC0009F6A9 /* LoginViewController.swift */,
+				90E53DAB2275E2EA0009F6A9 /* SignInViewController.swift */,
+				90E53DAD2275E3070009F6A9 /* SignUpViewController.swift */,
+				90C9E85622760D5600FAEAB5 /* Metas.storyboard */,
+				90C9E85822760DEE00FAEAB5 /* MetasViewController.swift */,
 			);
 			path = fortuna;
 			sourceTree = "<group>";
@@ -147,10 +165,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				841AA50322737DBA00DB843F /* LaunchScreen.storyboard in Resources */,
-				F3587A5B2273998B0088071C /* TelaInicial.storyboard in Resources */,
 				841AA50022737DBA00DB843F /* Assets.xcassets in Resources */,
+				90E53DA62275DE9E0009F6A9 /* ResumoDetalhado.storyboard in Resources */,
 				841AA4FB22737DB800DB843F /* Main.storyboard in Resources */,
-				C092F33E2273946000667B9F /* TelaPrincipal.storyboard in Resources */,
+				90E53DA42275DDCE0009F6A9 /* Login.storyboard in Resources */,
+				90E53DA22275DC1A0009F6A9 /* Resumo.storyboard in Resources */,
+				90C9E85722760D5600FAEAB5 /* Metas.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,13 +181,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				906DC05F227515B3008FFA26 /* TelaInicialViewController.swift in Sources */,
-				906DC061227517AA008FFA26 /* TelaPrincipalViewController.swift in Sources */,
+				90E53DAC2275E2EA0009F6A9 /* SignInViewController.swift in Sources */,
+				90E53DA82275DF820009F6A9 /* ResumoDetalhadoViewController.swift in Sources */,
+				90E53D9E2275CD870009F6A9 /* ResumoViewController.swift in Sources */,
 				906DC05D227514D9008FFA26 /* Lancamento+CoreDataClass.swift in Sources */,
 				841AA4FE22737DB800DB843F /* fortuna.xcdatamodeld in Sources */,
+				90E53DAE2275E3070009F6A9 /* SignUpViewController.swift in Sources */,
 				841AA4F822737DB800DB843F /* ViewController.swift in Sources */,
 				906DC051227512EF008FFA26 /* CoreDataManager.swift in Sources */,
 				906DC05B2275146E008FFA26 /* Lancamento+CoreDataProperties.swift in Sources */,
+				90C9E85922760DEE00FAEAB5 /* MetasViewController.swift in Sources */,
+				90E53DAA2275E2BC0009F6A9 /* LoginViewController.swift in Sources */,
 				841AA4F622737DB800DB843F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

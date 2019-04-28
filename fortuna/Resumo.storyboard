@@ -10,28 +10,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Meu Cofrinho-->
+        <!--Resumo View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TelaPrincipalViewController" customModule="fortuna" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Resumo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ResumoViewController" customModule="fortuna" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BaE-HX-TfK">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Wue-Ih-ISQ"/>
-                                    <barButtonItem systemItem="add" id="B28-sh-8V4"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Roe-aL-quS"/>
-                                    <barButtonItem title="Menu" id="RH8-iI-lui"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="67c-RA-ILI"/>
-                                    <barButtonItem title="—" id="TEO-2D-CLb"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="reg-Z3-dhe"/>
-                                </items>
-                            </toolbar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6lA-pR-dMt">
-                                <rect key="frame" x="16" y="138" width="343" height="485"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6lA-pR-dMt">
+                                <rect key="frame" x="16" y="138" width="343" height="469"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="lancamentoCell" textLabel="3oF-IA-EiE" detailTextLabel="DSf-Cl-tGQ" style="IBUITableViewCellStyleValue1" id="VT7-Ua-9AC">
@@ -72,69 +60,25 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="BaE-HX-TfK" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="GYj-aI-2Ia"/>
                             <constraint firstItem="ezi-de-XwE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="J9o-da-IaC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6lA-pR-dMt" secondAttribute="trailing" constant="16" id="Uyb-oN-U4Y"/>
-                            <constraint firstItem="BaE-HX-TfK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dQ0-TS-viJ"/>
                             <constraint firstItem="ezi-de-XwE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="hhg-Wh-wfs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6lA-pR-dMt" secondAttribute="bottom" constant="16" id="jNd-yn-K34"/>
                             <constraint firstItem="6lA-pR-dMt" firstAttribute="top" secondItem="ezi-de-XwE" secondAttribute="bottom" constant="16" id="m6c-xZ-VW8"/>
-                            <constraint firstItem="BaE-HX-TfK" firstAttribute="top" secondItem="6lA-pR-dMt" secondAttribute="bottom" id="nWy-0o-SEc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ezi-de-XwE" secondAttribute="trailing" constant="16" id="ocP-65-bmf"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BaE-HX-TfK" secondAttribute="bottom" id="qmp-gF-y1i"/>
                             <constraint firstItem="6lA-pR-dMt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="skt-lV-9uq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Meu Cofrinho" id="mPl-xE-emd">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="avg-Ya-i4z">
-                            <view key="customView" contentMode="scaleToFill" id="9ZW-kG-FyP">
-                                <rect key="frame" x="16" y="0.0" width="82" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fUD-85-wbR">
-                                        <rect key="frame" x="20" y="1" width="42" height="42"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="42" id="0Xd-xM-dbV"/>
-                                            <constraint firstAttribute="width" secondItem="fUD-85-wbR" secondAttribute="height" multiplier="1:1" id="sV8-5x-0ZE"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="21"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="fUD-85-wbR" firstAttribute="leading" secondItem="9ZW-kG-FyP" secondAttribute="leading" constant="20" id="RaX-Pj-day"/>
-                                    <constraint firstItem="fUD-85-wbR" firstAttribute="centerX" secondItem="9ZW-kG-FyP" secondAttribute="centerX" id="gQ8-kJ-YJt"/>
-                                    <constraint firstItem="fUD-85-wbR" firstAttribute="centerY" secondItem="9ZW-kG-FyP" secondAttribute="centerY" id="utG-48-uC8"/>
-                                </constraints>
-                            </view>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Entrar" id="GSQ-lt-3GT">
-                            <connections>
-                                <segue destination="L6R-MK-tW8" kind="show" id="L1A-T1-Snw"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="lancamentosTableView" destination="6lA-pR-dMt" id="ADf-qk-tc9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1588" y="792.95352323838085"/>
-        </scene>
-        <!--TelaInicial-->
-        <scene sceneID="QcX-fB-HBf">
-            <objects>
-                <viewControllerPlaceholder storyboardName="TelaInicial" id="L6R-MK-tW8" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nov-bW-gr8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2148" y="422"/>
+            <point key="canvasLocation" x="1663" y="1162"/>
         </scene>
     </scenes>
 </document>

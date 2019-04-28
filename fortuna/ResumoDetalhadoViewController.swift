@@ -1,22 +1,21 @@
 //
-//  TelaInicialViewController.swift
+//  ResumoDetalhadoViewController.swift
 //  fortuna
 //
-//  Created by Rafael Parente on 27/04/19.
+//  Created by Rafael Parente on 28/04/19.
 //  Copyright © 2019 João Paulo de Araújo Ferreira. All rights reserved.
 //
 
 import UIKit
 
-class TelaInicialViewController: UIViewController {
-
+class ResumoDetalhadoViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -27,4 +26,16 @@ class TelaInicialViewController: UIViewController {
     }
     */
 
+}
+
+extension ResumoDetalhadoViewController: FortunaToolbarProtocol {
+    
+    func didTapMaisBarButtonItem() {
+        
+    }
+    
+    func didTapMenosBarButtonItem() {
+        
+    }
+    
 }

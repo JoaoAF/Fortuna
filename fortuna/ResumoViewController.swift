@@ -1,14 +1,14 @@
 //
-//  TelaPrincipalViewController.swift
+//  ResumoViewController.swift
 //  fortuna
 //
-//  Created by Rafael Parente on 27/04/19.
+//  Created by Rafael Parente on 28/04/19.
 //  Copyright © 2019 João Paulo de Araújo Ferreira. All rights reserved.
 //
 
 import UIKit
 
-class TelaPrincipalViewController: UIViewController {
+class ResumoViewController: UIViewController {
 
     @IBOutlet weak var lancamentosTableView: UITableView!
     
@@ -21,7 +21,7 @@ class TelaPrincipalViewController: UIViewController {
     
 }
 
-extension TelaPrincipalViewController: UITableViewDataSource {
+extension ResumoViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return lancamentos?.count ?? 0
     }
@@ -42,3 +42,16 @@ extension TelaPrincipalViewController: UITableViewDataSource {
     }
     
 }
+
+extension ResumoViewController: FortunaToolbarProtocol {
+    
+    func didTapMaisBarButtonItem() {
+        
+    }
+    
+    func didTapMenosBarButtonItem() {
+        
+    }
+    
+}
+
