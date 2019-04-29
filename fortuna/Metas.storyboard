@@ -18,9 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="odf-aV-5gP">
-                                <rect key="frame" x="40" y="86" width="295" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="odf-aV-5gP">
+                                <rect key="frame" x="22" y="86" width="331" height="29"/>
                                 <segments>
                                     <segment title="Semana"/>
                                     <segment title="Mês"/>
@@ -29,6 +28,12 @@
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sgs-0y-0mc" firstAttribute="trailing" secondItem="odf-aV-5gP" secondAttribute="trailing" constant="22" id="cYW-tU-4M9"/>
+                            <constraint firstItem="odf-aV-5gP" firstAttribute="top" secondItem="sgs-0y-0mc" secondAttribute="top" constant="22" id="lQW-V7-10s"/>
+                            <constraint firstItem="odf-aV-5gP" firstAttribute="leading" secondItem="sgs-0y-0mc" secondAttribute="leading" constant="22" id="nzj-oY-AOK"/>
+                            <constraint firstItem="odf-aV-5gP" firstAttribute="centerX" secondItem="sgs-0y-0mc" secondAttribute="centerX" id="uza-oO-XeT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="sgs-0y-0mc"/>
                     </view>
                     <toolbarItems>
@@ -37,8 +42,6 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="X8d-jk-5ir"/>
                         <barButtonItem title="—" id="Uyh-pz-J0I"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="7sE-dN-arU"/>
-                        <barButtonItem title="Item" id="iEj-MS-EVa"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="fDw-gj-sCM"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Metas" id="okT-fJ-joO"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
