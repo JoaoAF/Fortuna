@@ -32,8 +32,8 @@ extension ResumoViewController: UITableViewDataSource {
         
         if let lancamentos = lancamentos {
             let lancamento = lancamentos[indexPath.row]
-            //cell.textLabel?.text = lancamento.descricao ?? lancamento.categoria
-            //cell.detailTextLabel?.text = "\(lancamento.moeda) \(lancamento.valor)"
+            cell.textLabel?.text = lancamento.descricao ?? lancamento.categoria
+            cell.detailTextLabel?.text = "\(lancamento.moeda) \(lancamento.valor)"
             cell.detailTextLabel?.textColor = lancamento.isGasto ? .red : .green
             cell.accessoryType = .disclosureIndicator
         }

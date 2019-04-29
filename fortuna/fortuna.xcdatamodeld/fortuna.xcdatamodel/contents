@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18D109" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18B75" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Lancamento" representedClassName="Lancamento" syncable="YES">
-        <attribute name="categoria" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="categoria" attributeType="String" syncable="YES"/>
         <attribute name="descricao" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="isGasto" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="moeda" optional="YES" attributeType="Binary" syncable="YES"/>
-        <attribute name="valor" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isGasto" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="moeda" attributeType="String" syncable="YES"/>
+        <attribute name="valor" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
         <element name="Lancamento" positionX="-63" positionY="-18" width="128" height="120"/>

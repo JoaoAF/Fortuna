@@ -18,9 +18,9 @@ extension Lancamento {
     }
 
     @NSManaged public var descricao: String?
-    @NSManaged public var categoria: NSData?
+    @NSManaged public var categoria: String
     @NSManaged public var valor: Float
-    @NSManaged public var moeda: NSData?
+    @NSManaged public var moeda: String
     @NSManaged public var isGasto: Bool
 
 }
