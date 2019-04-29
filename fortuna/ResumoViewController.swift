@@ -52,7 +52,7 @@ extension ResumoViewController: UITableViewDataSource {
 extension ResumoViewController: FortunaToolbarProtocol {
     
     func didTapMaisBarButtonItem() {
-        
+        performSegue(withIdentifier: "novoLancamento", sender: nil)
     }
     
     func didTapMenosBarButtonItem() {
@@ -64,7 +64,7 @@ extension ResumoViewController: FortunaToolbarProtocol {
 extension ResumoViewController: ResumoViewControllerDelegate {
     
     func saveLancamento(descricao: String?, categoria: String, valor: Float, moeda: String) {
-        let lancamento = CoreDataManager.shared.contex
+        //let lancamento = 
     }
     
 }

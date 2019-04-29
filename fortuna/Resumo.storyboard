@@ -74,7 +74,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="lancamentosTableView" destination="6lA-pR-dMt" id="ADf-qk-tc9"/>
-                        <segue destination="UoN-hD-etM" kind="presentation" id="DUz-3L-8ab"/>
+                        <segue destination="UoN-hD-etM" kind="presentation" identifier="novoLancamento" id="DUz-3L-8ab"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -140,12 +140,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fEs-GU-nz6">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEs-GU-nz6">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Novo lançamento" id="4zl-G5-dyx">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Eqj-ab-GS7"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Eqj-ab-GS7">
+                                            <connections>
+                                                <action selector="saveLancamento:" destination="UoN-hD-etM" id="LAS-n7-OcL"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -161,6 +164,7 @@
                             <constraint firstItem="Ga1-RS-rmX" firstAttribute="centerX" secondItem="adK-ts-ls8" secondAttribute="centerX" id="KMw-gG-ZPl"/>
                             <constraint firstItem="PJu-ve-xXV" firstAttribute="width" secondItem="lpp-pu-cWn" secondAttribute="width" id="OsG-IM-wgK"/>
                             <constraint firstItem="NYV-HH-PD7" firstAttribute="centerX" secondItem="Ga1-RS-rmX" secondAttribute="centerX" id="PZc-Wp-Q8c"/>
+                            <constraint firstItem="fEs-GU-nz6" firstAttribute="leading" secondItem="adK-ts-ls8" secondAttribute="leading" id="QEu-ry-hhO"/>
                             <constraint firstItem="FW1-WG-chq" firstAttribute="top" secondItem="NYV-HH-PD7" secondAttribute="bottom" constant="42" id="Vv6-K9-Aph"/>
                             <constraint firstItem="FW1-WG-chq" firstAttribute="centerX" secondItem="adK-ts-ls8" secondAttribute="centerX" id="XwV-8C-k1v"/>
                             <constraint firstItem="Ga1-RS-rmX" firstAttribute="top" secondItem="ZIT-VW-1a8" secondAttribute="bottom" constant="42" id="Z6r-eJ-ORu"/>
@@ -173,7 +177,9 @@
                             <constraint firstItem="ZIT-VW-1a8" firstAttribute="top" secondItem="HXS-TP-AtL" secondAttribute="bottom" constant="8" id="l2o-90-eZq"/>
                             <constraint firstItem="zju-wF-yqz" firstAttribute="leading" secondItem="adK-ts-ls8" secondAttribute="centerX" constant="32" id="nOb-zY-u0S"/>
                             <constraint firstItem="ZIT-VW-1a8" firstAttribute="centerX" secondItem="HXS-TP-AtL" secondAttribute="centerX" id="nu0-TJ-Rta"/>
+                            <constraint firstItem="fEs-GU-nz6" firstAttribute="top" secondItem="adK-ts-ls8" secondAttribute="top" id="pDA-Wo-AHZ"/>
                             <constraint firstItem="lpp-pu-cWn" firstAttribute="top" secondItem="FW1-WG-chq" secondAttribute="bottom" constant="42" id="utQ-qJ-biJ"/>
+                            <constraint firstItem="fEs-GU-nz6" firstAttribute="width" secondItem="DYy-XO-xvQ" secondAttribute="width" id="wY2-tj-kUt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="adK-ts-ls8"/>
                     </view>
