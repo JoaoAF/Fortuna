@@ -26,6 +26,7 @@
 		90E53DAA2275E2BC0009F6A9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E53DA92275E2BC0009F6A9 /* LoginViewController.swift */; };
 		90E53DAC2275E2EA0009F6A9 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E53DAB2275E2EA0009F6A9 /* SignInViewController.swift */; };
 		90E53DAE2275E3070009F6A9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E53DAD2275E3070009F6A9 /* SignUpViewController.swift */; };
+		C04480BD22779850001A2610 /* NovoLancamentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04480BC22779850001A2610 /* NovoLancamentoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		90E53DA92275E2BC0009F6A9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		90E53DAB2275E2EA0009F6A9 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		90E53DAD2275E3070009F6A9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		C04480BC22779850001A2610 /* NovoLancamentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovoLancamentoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				90E53DAD2275E3070009F6A9 /* SignUpViewController.swift */,
 				90C9E85622760D5600FAEAB5 /* Metas.storyboard */,
 				90C9E85822760DEE00FAEAB5 /* MetasViewController.swift */,
+				C04480BC22779850001A2610 /* NovoLancamentoViewController.swift */,
 			);
 			path = fortuna;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				90E53DA82275DF820009F6A9 /* ResumoDetalhadoViewController.swift in Sources */,
 				90E53D9E2275CD870009F6A9 /* ResumoViewController.swift in Sources */,
 				906DC05D227514D9008FFA26 /* Lancamento+CoreDataClass.swift in Sources */,
+				C04480BD22779850001A2610 /* NovoLancamentoViewController.swift in Sources */,
 				841AA4FE22737DB800DB843F /* fortuna.xcdatamodeld in Sources */,
 				90E53DAE2275E3070009F6A9 /* SignUpViewController.swift in Sources */,
 				841AA4F822737DB800DB843F /* ViewController.swift in Sources */,

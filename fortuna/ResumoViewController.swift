@@ -8,6 +8,12 @@
 
 import UIKit
 
+protocol ResumoViewControllerDelegate: class {
+    
+    func saveLancamento(descricao: String?, categoria: String, valor: Float, moeda: String)
+    
+}
+
 class ResumoViewController: UIViewController {
 
     @IBOutlet weak var lancamentosTableView: UITableView!
@@ -55,3 +61,10 @@ extension ResumoViewController: FortunaToolbarProtocol {
     
 }
 
+extension ResumoViewController: ResumoViewControllerDelegate {
+    
+    func saveLancamento(descricao: String?, categoria: String, valor: Float, moeda: String) {
+        let lancamento = CoreDataManager.shared.contex
+    }
+    
+}
