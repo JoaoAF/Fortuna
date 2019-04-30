@@ -51,6 +51,7 @@ class ViewController: UIPageViewController {
         if let firstVC = pages.first
         {
             setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
+            currentViewController = firstVC
         }
     }
     

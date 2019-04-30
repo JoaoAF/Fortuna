@@ -8,21 +8,29 @@
 
 import UIKit
 
-protocol ResumoViewControllerDelegate: class {
-    
-    func saveLancamento(descricao: String?, categoria: String, valor: Float, moeda: String)
-    
-}
-
 class ResumoViewController: UIViewController {
 
     @IBOutlet weak var lancamentosTableView: UITableView!
     
-    var lancamentos: [Lancamento]?
+    var lancamentos: [Lancamento]? {
+        didSet {
+            lancamentosTableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         lancamentosTableView.dataSource = self
+        
+        lancamentos = try? CoreDataManager.shared.context.fetch(Lancamento.fetchRequest())
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let novoLancamentoViewController = segue.destination as? NovoLancamentoViewController,
+            let sender = sender as String {
+            novoLancamentoViewController.delegate = self
+            novoLancamentoViewController.isGasto = sender == "Menos"
+        }
     }
     
 }
@@ -52,19 +60,29 @@ extension ResumoViewController: UITableViewDataSource {
 extension ResumoViewController: FortunaToolbarProtocol {
     
     func didTapMaisBarButtonItem() {
-        performSegue(withIdentifier: "novoLancamento", sender: nil)
+        performSegue(withIdentifier: "novoLancamento", sender: "Mais")
     }
     
     func didTapMenosBarButtonItem() {
-        
+        performSegue(withIdentifier: "novoLancamento", sender: "Menos")
     }
     
 }
 
-extension ResumoViewController: ResumoViewControllerDelegate {
+extension ResumoViewController: NovoLancamentoViewControllerDelegate {
     
-    func saveLancamento(descricao: String?, categoria: String, valor: Float, moeda: String) {
-        //let lancamento = 
+    func saveLancamento(categoria: String, moeda: String, valor: Float, descricao: String?) {
+        lancamento = Lancamento(context: CoreDataManager.shared.context)
+        lancamento.categoria = categoria
+        lancamento.moeda = moeda
+        lancamento.valor = valor
+        lancamento.descricao = descricao
+        
+        if let _ = try? CoreDataManager.shared.saveContext(),
+            let indexPath = lancamentosTableView.indexPathForSelectedRow {
+            lancamentos?[indexPath.row] = lancamento
+            lancamentosTableView.deselectRow(at: indexPath, animated: false)
+        }
     }
     
 }
