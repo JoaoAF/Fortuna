@@ -21,21 +21,27 @@ class ResumoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         lancamentosTableView.dataSource = self
+        lancamentosTableView.delegate = self
         
         lancamentos = try? CoreDataManager.shared.context.fetch(Lancamento.fetchRequest())
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let novoLancamentoViewController = segue.destination as? NovoLancamentoViewController,
-            let sender = sender as String {
+        if let novoLancamentoViewController = segue.destination as? NovoLancamentoViewController {
             novoLancamentoViewController.delegate = self
-            novoLancamentoViewController.isGasto = sender == "Menos"
+            
+            if let sender = sender as? String {
+                novoLancamentoViewController.loadAsGasto = sender == "Menos"
+            } else if let sender = sender as? Lancamento {
+                    novoLancamentoViewController.currentLancamento = sender
+            }
         }
     }
     
 }
 
 extension ResumoViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return lancamentos?.count ?? 0
     }
@@ -57,31 +63,56 @@ extension ResumoViewController: UITableViewDataSource {
     
 }
 
+extension ResumoViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let lancamento = lancamentos?[indexPath.row] {
+            performSegue(withIdentifier: "segueLancamento", sender: lancamento)
+        }
+    }
+    
+}
+
 extension ResumoViewController: FortunaToolbarProtocol {
     
     func didTapMaisBarButtonItem() {
-        performSegue(withIdentifier: "novoLancamento", sender: "Mais")
+        performSegue(withIdentifier: "segueLancamento", sender: "Mais")
     }
     
     func didTapMenosBarButtonItem() {
-        performSegue(withIdentifier: "novoLancamento", sender: "Menos")
+        performSegue(withIdentifier: "segueLancamento", sender: "Menos")
     }
     
 }
 
 extension ResumoViewController: NovoLancamentoViewControllerDelegate {
     
-    func saveLancamento(categoria: String, moeda: String, valor: Float, descricao: String?) {
-        lancamento = Lancamento(context: CoreDataManager.shared.context)
+    func saveLancamento(categoria: String, moeda: String, valor: Float, isGasto: Bool, descricao: String?) {
+        let lancamento = Lancamento(context: CoreDataManager.shared.context)
         lancamento.categoria = categoria
         lancamento.moeda = moeda
         lancamento.valor = valor
+        lancamento.isGasto = isGasto
         lancamento.descricao = descricao
         
-        if let _ = try? CoreDataManager.shared.saveContext(),
-            let indexPath = lancamentosTableView.indexPathForSelectedRow {
-            lancamentos?[indexPath.row] = lancamento
-            lancamentosTableView.deselectRow(at: indexPath, animated: false)
+        if let _ = try? CoreDataManager.shared.saveContext() {
+            if let indexPath = lancamentosTableView.indexPathForSelectedRow {
+                lancamentos?[indexPath.row] = lancamento
+                //lancamentosTableView.deselectRow(at: indexPath, animated: false)
+            } else {
+                lancamentos?.append(lancamento)
+            }
+        }
+    }
+    
+    func delLancamento(_ lancamento: Lancamento) {
+        if let indexPath = lancamentosTableView.indexPathForSelectedRow {
+            CoreDataManager.shared.context.delete(lancamento)
+            
+            if let _ = try? CoreDataManager.shared.saveContext() {
+                //lancamentosTableView.deselectRow(at: indexPath, animated: false)
+                lancamentos?.remove(at: indexPath.row)
+            }
         }
     }
     

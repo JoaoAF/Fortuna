@@ -60,8 +60,18 @@ class ViewController: UIPageViewController {
 extension ViewController: UIPageViewControllerDelegate {
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-        if completed {
-            currentViewController = pageViewController.viewControllers?.first
+        if (!completed) {
+            return
+        }
+        
+        if let firstViewController = pageViewController.viewControllers?.first,
+            let arrayIndex = pages.index(of: firstViewController) {
+            currentViewController = firstViewController
+            if arrayIndex == 0 {
+                self.navigationController?.navigationBar.topItem?.title = "Meu Cofrinho"
+            } else {
+                self.navigationController?.navigationBar.topItem?.title = "Resumo Detalhado"
+            }
         }
     }
     
