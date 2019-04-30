@@ -48,6 +48,10 @@ class NovoLancamentoViewController: UIViewController {
         }
     }
     
+    @IBAction func didTapCancelButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func saveLancamento(_ sender: Any) {
         if let categoria = categoriaTextField.text, !categoria.isEmpty,
             let moeda = moedaTextField.text, !moeda.isEmpty,
