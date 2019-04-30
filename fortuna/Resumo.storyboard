@@ -74,6 +74,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="lancamentosTableView" destination="6lA-pR-dMt" id="ADf-qk-tc9"/>
+                        <outlet property="saldoLabel" destination="ezi-de-XwE" id="vkg-bk-woW"/>
                         <segue destination="UoN-hD-etM" kind="presentation" identifier="segueLancamento" id="DUz-3L-8ab"/>
                     </connections>
                 </viewController>

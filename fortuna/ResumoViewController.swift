@@ -11,10 +11,12 @@ import UIKit
 class ResumoViewController: UIViewController {
 
     @IBOutlet weak var lancamentosTableView: UITableView!
+    @IBOutlet weak var saldoLabel: UILabel!
     
     var lancamentos: [Lancamento]? {
         didSet {
             lancamentosTableView.reloadData()
+            atualizarSaldo()
         }
     }
     
@@ -35,6 +37,28 @@ class ResumoViewController: UIViewController {
             } else if let sender = sender as? Lancamento {
                     novoLancamentoViewController.currentLancamento = sender
             }
+        }
+    }
+    
+    func atualizarSaldo() {
+        guard let lancamentos = lancamentos else { return }
+        
+        var total: Float = 0.00
+        for l in lancamentos {
+            if l.isGasto {
+                total = total - l.valor
+            } else {
+                total = total + l.valor
+            }
+        }
+        
+        saldoLabel.text = "R$ \(total)"
+        if total > 0 {
+            saldoLabel.textColor = .green
+        } else if total < 0 {
+            saldoLabel.textColor = .red
+        } else {
+            saldoLabel.textColor = saldoLabel.highlightedTextColor
         }
     }
     
@@ -69,6 +93,10 @@ extension ResumoViewController: UITableViewDelegate {
         if let lancamento = lancamentos?[indexPath.row] {
             performSegue(withIdentifier: "segueLancamento", sender: lancamento)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Resumo"
     }
     
 }
